@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { addAnimal, updateAnimal, getAnimalById } from "../../managers/animals"
 import { getLocations } from "../../managers/locations"
 import { useParams, useNavigate } from 'react-router-dom'
@@ -28,7 +28,8 @@ export const AnimalForm = () => {
   }, [animalId])
 
   const constructNewAnimal = () => {
-    const locationId = parseInt(animal.location_id)
+    debugger
+    const locationId = parseInt(animal.locationId)
 
     if (locationId === 0) {
       window.alert("Please select a location")
